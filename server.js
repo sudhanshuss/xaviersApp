@@ -11,6 +11,7 @@ var oneDay = 60000;
 var app = express();
 var app1= connect();
 var PORT = process.env.PORT || 3000;
+var http = require('http').Server(app);
 var todos = [];
 var todoNextId = 1;
 
@@ -65,7 +66,7 @@ app.delete('/users/login', middleware.requireAuthentication, function(req, res) 
 db.sequelize.sync({
 	//force: true
 }).then(function() {
-	app.listen(PORT, function() {
+	http.listen(PORT, function() {
 		console.log('Express listening on port ' + PORT + '!');
 	});
 });
