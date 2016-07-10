@@ -3,7 +3,7 @@ $(document).ready(function() {
   $(".parent-detail").hide();
   $(".school-detail").hide();
   $(".student-detail-continue").click(function() {
-    $(".parent-detail-continue").attr("disabled", "disabled");
+    /*$(".parent-detail-continue").attr("disabled", "disabled");*/
     $(".student-detail").hide();
     $(".parent-detail").show();
   });

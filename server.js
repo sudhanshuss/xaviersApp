@@ -78,7 +78,7 @@ app.post('/student/register',middleware.requireAuthentication, function(req, res
 	});
 });
 
-db.sequelize.sync({force:true
+db.sequelize.sync({
 }).then(function() {
 	http.listen(PORT, function() {
 		console.log('Express listening on port ' + PORT + '!');

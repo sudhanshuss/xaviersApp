@@ -7,6 +7,22 @@
 	<script src="/js/jquery-2.1.4.min.js"></script>
 	<link rel="stylesheet" href="/css/styles.css">
 	<script src="/js/login.js"></script>
+	<script>
+		var $buoop = {
+		    c: 2
+		  };
+
+		function $buo_f() {
+		  var e = document.createElement("script");
+		  e.src = "//browser-update.org/update.min.js";
+		  document.body.appendChild(e);
+		};
+		try {
+		  document.addEventListener("DOMContentLoaded", $buo_f, false)
+		} catch (e) {
+		  window.attachEvent("onload", $buo_f)
+		} 
+	</script>
 	<style>
 			.well {
 				margin-top: 10px;
