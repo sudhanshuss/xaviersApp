@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Student Detail</title>
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<script src="/js/jquery-2.1.4.min.js"></script>
+	<script src="/js/register.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<style>
+			.well {
+				margin-top: 10px;
+			}
+		</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 well">
+				<form >
+					<div class="student-detail">
+						<h1 class="room-title text-center">Student Detail</h1>
+						<div class="form-group">
+							<label for="firstName">First Name*</label>
+							<input type="text" class="form-control" id="firstName" placeholder="First Name"></div>
+						<div class="form-group">
+							<label for="middleName">Middle Name</label>
+							<input type="text" class="form-control" id="middleName" placeholder="Middle Name"></div>
+						<div class="form-group">
+							<label for="lastName">Last Name*</label>
+							<input type="text" class="form-control" id="lastName" placeholder="Last Name"></div>
+						<div class="form-group">
+							<label for	dob">Date Of Birth*</label>
+							<input type="date" class="form-control" id="dob" ></div>
+						<div class="form-group">
+							<label for="dateOfAdmission">Date of Admission*</label>
+							<input type="date" class="form-control" id="dateOfAdmission" ></div>
+						<div class="form-group">
+							<label for="classOfAdmission">Class of Admission*</label>
+							<input type="text" class="form-control" id="classOfAdmission" ></div>
+						<div class="form-group">
+							<label for="communicationAddress">Communication Address</label>
+							<textarea class="form-control" row="3" id="communicationAddress" placeholder="Address"></textarea>
+						</div>
+						<div class="form-group">
+							<div class="student-detail-back col-xs-6 btn btn-primary btn-lg">back</div>
+							<div class="student-detail-continue col-xs-6 btn btn-primary btn-lg">continue</div>
+						</div>
+					</div>
+					<div class="parent-detail">
+						<h1 class="room-title text-center">Parent/Guardian Detail</h1>
+						<div class="form-group">
+							<label for="fatherName">Father's Name*</label>
+							<input type="text" class="form-control" id="fatherName" placeholder="Father's Name"></div>
+						<div class="form-group">
+							<label for="motherName">Mother's Name*</label>
+							<input type="text" class="form-control" id="motherName" placeholder="Mother's Name"></div>
+						<div class="form-group">
+							<label for="fatherOccupation">Father's Occupation*</label>
+							<input type="text" class="form-control" id="fatherOccupation" placeholder="Father's Occupation"></div>
+						<div class="form-group">
+							<label for="motherOccupation">Mother's Occupation*</label>
+							<input type="text" class="form-control" id="motherOccupation" placeholder="Mother's Occupation"></div>
+						<div class="form-group">
+							<label for="mobile">Mobile*</label>
+							<input type="text" class="form-control" id="mobile" placeholder="Mobile Number"></div>
+						<div class="form-group">
+							<label for="telephone">Telephone</label>
+							<input type="text" class="form-control" id="telephone" placeholder="Telephone Number"></div>
+						<div class="form-group">
+							<label for="permanentaddress">Permanent Address*</label>
+							<textarea class="form-control" row="3" id="permanentaddress" placeholder="Address"></textarea>
+						</div>
+						<div class="form-group">
+							<div  class="parent-detail-back col-xs-6 btn btn-primary btn-lg">back</div>
+							<div  class="parent-detail-continue col-xs-6 btn btn-primary btn-lg ">continue</div>
+						</div>
+					</div>
+					<div class="school-detail">
+						<h1 class="room-title text-center">Previous School Detail</h1>
+						<div class="form-group">
+							<label for="previousSchoolName">School Name*</label>
+							<input type="text" class="form-control" id="previousSchoolName" placeholder="Name of the school from which student came"></div>
+						<div class="form-group">
+							<label for="previousSchoolclass">Class*</label>
+							<input type="text" class="form-control" id="previousSchoolclass" placeholder="Class in which student was reading"></div>
+						<div class="form-group">
+							<label for="transferCertificate">Transfer Certificate Number</label>
+							<input type="text" class="form-control" id="transferCertificate" placeholder="Transfer certificate"></div>
+						<div class="form-group">
+							<label for="previousSchooltelephone">Telephone Number</label>
+							<input type="text" class="form-control" id="previousSchooltelephone" placeholder="Telephone Number"></div>
+						<div class="form-group">
+							<label for="previousSchoolAddress">Address</label>
+							<textarea class="form-control" row="3" id="previousSchoolAddress" placeholder="Address"></textarea>
+						</div>
+						<div class="form-group">
+							<div class="school-detail-back col-xs-6 btn btn-primary btn-lg">back</div>
+							<div class="school-detail-register col-xs-6 btn btn-primary btn-lg">Register</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body text-center bg-success h3">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="location.href = 'menu.html';" data-dismiss="modal">OK</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+	</div>
+</body>
+</html>

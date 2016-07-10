@@ -1,27 +1,27 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var _ = require('underscore');
-var connect = require('connect');
 
 var db = require('./db.js');
 var bcrypt = require('bcryptjs');
 var middleware = require('./middleware.js')(db);
 
-var oneDay = 60000;
+
 var app = express();
-var app1= connect();
 var PORT = process.env.PORT || 3000;
 var http = require('http').Server(app);
 var todos = [];
 var todoNextId = 1;
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public',{index: 'html/login.html'}));
 
 app.use(bodyParser.json());
 
-app.get('/html', function(req, res) {
+/*app.get('/', function(req, res) {
+	console.log("came here!");
 	res.send('Todo API Root');
-});
+});*/
+
 
 
 
@@ -63,8 +63,22 @@ app.delete('/users/login', middleware.requireAuthentication, function(req, res) 
 	});
 });
 
+// POST student/register
+app.post('/student/register',middleware.requireAuthentication, function(req, res) {
+	debugger;
+	var body = _.pick(req.body, 'firstName', 'middlename', 'lastName', 'dob', 'dateOfAdmission', 'classOfAdmission',
+		'communicationAddress', 'fatherName', 'motherName', 'fatherOccupation', 'motherOccupation', 'mobile',
+		'telephone', 'permanentaddress', 'previousSchoolName', 'previousSchoolclass', 'transferCertificate',
+		'previousSchooltelephone', 'previousSchoolAddress');
+
+	db.student.create(body).then(function(student) {
+		res.json(student.toJSON());
+	}, function(e) {
+		res.status(400).json(e);
+	});
+});
+
 db.sequelize.sync({
-	//force: true
 }).then(function() {
 	http.listen(PORT, function() {
 		console.log('Express listening on port ' + PORT + '!');
