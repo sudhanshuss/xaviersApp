@@ -2,19 +2,29 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Student Detail</title>
+		<script src="/js/jquery-2.1.4.min.js"></script>
 		<link rel="stylesheet" href="/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/css/styles.css">
 		<style>
 			.well {
 				margin-top: 10px;
 			}
+
+			#topContainer{
+				background-image: url("/images/background-image.jpg");
+				height: 100%;
+				width : 100%; 
+				background-size :cover;
+			}
 		</style>
 	</head>
 	<body>
-		<div class="container-fluid">
+		<div class="container contentContainer" id="topContainer">
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3 well">
+				<div class="col-md-6 col-md-offset-3 ">
 					<h1 class="room-title text-center">Add User</h1>
 					<form action="parentDetail.html">
 						  <div class="form-group">
@@ -38,6 +48,6 @@
 				</div>
 			</div>
 		</div>
-		<script src="/js/jquery-2.1.4.min.js"></script>
+		<script>$(".contentContainer").css("min-height",$(window).height());</script>
 	</body>
 </html>
