@@ -2,37 +2,31 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Xavier App</title>
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
 	<script src="/js/jquery-2.1.4.min.js"></script>
 	<link rel="stylesheet" href="/css/styles.css">
 	<script src="/js/login.js"></script>
-	<script>
-		var $buoop = {
-		    c: 2
-		  };
 
-		function $buo_f() {
-		  var e = document.createElement("script");
-		  e.src = "//browser-update.org/update.min.js";
-		  document.body.appendChild(e);
-		};
-		try {
-		  document.addEventListener("DOMContentLoaded", $buo_f, false)
-		} catch (e) {
-		  window.attachEvent("onload", $buo_f)
-		} 
-	</script>
 	<style>
 			.well {
 				margin-top: 10px;
 			}
+
+			#topContainer{
+				background-image: url("/images/background-image.jpg");
+				height: 400px;
+				width : 100%; 
+				background-size :cover;
+			}
 		</style>
 </head>
 <body>
-	<div class="container">
+	<div class="container contentContainer" id="topContainer">
 		<div class="row" >
-			<div class="col-md-6 col-md-offset-3 well">
+			<div class="col-md-6 col-md-offset-3 ">
 				<h1 id="containerDiv" class="text-center">LOGIN</h1>
 				<form >
 					<div class="form-group">
@@ -53,8 +47,10 @@
 						</div>
 					</div>
 					<div class="form-group">
-								<h6 class="error-message text-center" color="red"><!-- login error --></h6>
-							</div>
+						<h6 class="error-message text-center" color="red">
+							<!-- login error -->
+						</h6>
+					</div>
 					<div class="form-group" >
 						<input type="submit" id="login-button" value="Login"  class="btn btn-primary btn-block"/>
 					</div>
@@ -62,5 +58,6 @@
 			</div>
 		</div>
 	</div>
+	<script>$(".contentContainer").css("min-height",$(window).height());</script>
 </body>
 </html>

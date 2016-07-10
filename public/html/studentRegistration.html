@@ -11,12 +11,18 @@
 			.well {
 				margin-top: 10px;
 			}
+			#topContainer{
+				background-image: url("/images/background-image.jpg");
+				height: 400px;
+				width : 100%; 
+				background-size :cover;
+			}
 		</style>
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container contentContainer" id="topContainer">
 		<div class="row">
-			<div class="col-md-6 col-md-offset-3 well">
+			<div class="col-md-6 col-md-offset-3 ">
 				<form >
 					<div class="student-detail">
 						<h1 class="room-title text-center">Student Detail</h1>
@@ -104,22 +110,24 @@
 		</div>
 
 		<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel"></h4>
-      </div>
-      <div class="modal-body text-center bg-success h3">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" onclick="location.href = 'menu.html';" data-dismiss="modal">OK</button>
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel"></h4>
+					</div>
+					<div class="modal-body text-center bg-success h3"></div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" onclick="location.href = 'menu.html';" data-dismiss="modal">OK</button>
 
-      </div>
-    </div>
-  </div>
-</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+	<script>$(".contentContainer").css("min-height",$(window).height());</script>
 </body>
 </html>
